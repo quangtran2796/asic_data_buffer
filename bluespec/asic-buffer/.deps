@@ -1,0 +1,7 @@
+build/ASICBuffer_tested.bo: /home/stud/mt60feqy/Desktop/asic_data_buffer/bluespec/asic-buffer/src/ASICBuffer_tested.bsv 
+build/ASICBuffer_fifo.bo: /home/stud/mt60feqy/Desktop/asic_data_buffer/bluespec/asic-buffer/src/ASICBuffer_fifo.bsv 
+build/Testbench.bo: /home/stud/mt60feqy/Desktop/asic_data_buffer/bluespec/asic-buffer/src/Testbench.bsv build/ASICBuffer.bo
+build/TestsMainTest.bo: /home/stud/mt60feqy/Desktop/asic_data_buffer/bluespec/asic-buffer/src/TestsMainTest.bsv build/TestHelper.bo build/ASICBuffer.bo
+build/TestHelper.bo: /home/stud/mt60feqy/Desktop/asic_data_buffer/bluespec/asic-buffer/src/TestHelper.bsv 
+build/ASICBuffer.bo: /home/stud/mt60feqy/Desktop/asic_data_buffer/bluespec/asic-buffer/src/ASICBuffer.bsv 
+OBJS=build/ASICBuffer_tested.bo build/ASICBuffer_fifo.bo build/TestHelper.bo build/ASICBuffer.bo build/Testbench.bo build/TestsMainTest.bo

@@ -1,0 +1,258 @@
+=== Generated schedule for mkTestsMainTest ===
+
+Method schedule
+---------------
+Method: go
+Ready signal: ((! testFSM_start_reg_1) || testFSM_fired) &&
+	      (! testFSM_start_reg)
+Sequenced after: done
+Conflicts: go
+ 
+Method: done
+Ready signal: True
+Conflict-free: done
+Sequenced before: go
+ 
+Rule schedule
+-------------
+Rule: dut_slave_read_isRst_isResetAssertedUpdate
+Predicate: dut_slave_read_isRst_isInReset
+Blocking rules: (none)
+ 
+Rule: dut_slave_read_addrInWrite
+Predicate: dut_slave_read_in.i_notFull &&
+	   (! dut_slave_read_isRst_isInReset) &&
+	   dut_slave_read_arvalidIn.wget &&
+	   dut_slave_read_in.notFull
+Blocking rules: (none)
+ 
+Rule: dut_slave_read_deqOut
+Predicate: dut_slave_read_out.i_notEmpty &&
+	   (! dut_slave_read_isRst_isInReset) &&
+	   dut_slave_read_rreadyIn.wget &&
+	   dut_slave_read_out.notEmpty
+Blocking rules: (none)
+ 
+Rule: dut_slave_read_putOutData
+Predicate: dut_slave_read_out.i_notEmpty
+Blocking rules: (none)
+ 
+Rule: dut_slave_write_isRst_isResetAssertedUpdate
+Predicate: dut_slave_write_isRst_isInReset
+Blocking rules: (none)
+ 
+Rule: dut_slave_write_mergeAddrData
+Predicate: dut_slave_write_addrIn_rv.port1__read[5] &&
+	   dut_slave_write_dataIn_rv.port1__read[72] &&
+	   dut_slave_write_in.i_notFull
+Blocking rules: (none)
+ 
+Rule: dut_slave_write_addrInWrite
+Predicate: (! dut_slave_write_addrIn_rv.port0__read[5]) &&
+	   (! dut_slave_write_isRst_isInReset) &&
+	   dut_slave_write_awvalidIn.wget
+Blocking rules: (none)
+ 
+Rule: dut_slave_write_dataInWrite
+Predicate: (! dut_slave_write_dataIn_rv.port0__read[72]) &&
+	   (! dut_slave_write_isRst_isInReset) &&
+	   dut_slave_write_wvalidIn.wget
+Blocking rules: (none)
+ 
+Rule: dut_slave_write_outWrite
+Predicate: dut_slave_write_out.i_notEmpty &&
+	   (! dut_slave_write_isRst_isInReset) &&
+	   dut_slave_write_breadyIn.wget &&
+	   dut_slave_write_out.notEmpty
+Blocking rules: (none)
+ 
+Rule: dut_slave_write_outForward
+Predicate: dut_slave_write_out.i_notEmpty
+Blocking rules: (none)
+ 
+Rule: dut_master_read_isRst_isResetAssertedUpdate
+Predicate: dut_master_read_isRst_isInReset
+Blocking rules: (none)
+ 
+Rule: dut_master_read_in_portA
+Predicate: True
+Blocking rules: (none)
+ 
+Rule: dut_master_read_in_portB
+Predicate: True
+Blocking rules: (none)
+ 
+Rule: dut_master_read_in_portB_read_data
+Predicate: True
+Blocking rules: (none)
+ 
+Rule: dut_master_read_out_1_portA
+Predicate: True
+Blocking rules: (none)
+ 
+Rule: dut_master_read_out_1_portB
+Predicate: True
+Blocking rules: (none)
+ 
+Rule: dut_master_read_out_1_portB_read_data
+Predicate: True
+Blocking rules: (none)
+ 
+Rule: dut_master_read_deqIn
+Predicate: (! (dut_master_read_in_rRdPtr.read ==
+	       dut_master_read_in_rWrPtr.read)) &&
+	   (! dut_master_read_isRst_isInReset) &&
+	   dut_master_read_arreadyIn.wget
+Blocking rules: (none)
+ 
+Rule: dut_master_read_forwardIn
+Predicate: (! (dut_master_read_in_rRdPtr.read ==
+	       dut_master_read_in_rWrPtr.read)) &&
+	   dut_master_read_in_wDataOut.whas
+Blocking rules: (none)
+ 
+Rule: dut_master_read_enqOut
+Predicate: (! ((dut_master_read_out_1_rRdPtr.read + 6'd16) ==
+	       dut_master_read_out_1_rWrPtr.read)) &&
+	   (! dut_master_read_isRst_isInReset) &&
+	   dut_master_read_rvalidIn.wget
+Blocking rules: (none)
+ 
+Rule: dut_master_write_isRst_isResetAssertedUpdate
+Predicate: dut_master_write_isRst_isInReset
+Blocking rules: (none)
+ 
+Rule: dut_master_write_in_addr_portA
+Predicate: True
+Blocking rules: (none)
+ 
+Rule: dut_master_write_in_addr_portB
+Predicate: True
+Blocking rules: (none)
+ 
+Rule: dut_master_write_in_addr_portB_read_data
+Predicate: True
+Blocking rules: (none)
+ 
+Rule: dut_master_write_in_data_portA
+Predicate: True
+Blocking rules: (none)
+ 
+Rule: dut_master_write_in_data_portB
+Predicate: True
+Blocking rules: (none)
+ 
+Rule: dut_master_write_in_data_portB_read_data
+Predicate: True
+Blocking rules: (none)
+ 
+Rule: dut_master_write_out_portA
+Predicate: True
+Blocking rules: (none)
+ 
+Rule: dut_master_write_out_portB
+Predicate: True
+Blocking rules: (none)
+ 
+Rule: dut_master_write_out_portB_read_data
+Predicate: True
+Blocking rules: (none)
+ 
+Rule: dut_master_write_deqInAddr
+Predicate: (! (dut_master_write_in_addr_rRdPtr.read ==
+	       dut_master_write_in_addr_rWrPtr.read)) &&
+	   (! dut_master_write_isRst_isInReset) &&
+	   dut_master_write_wawready.wget
+Blocking rules: (none)
+ 
+Rule: dut_master_write_forwardInAddr
+Predicate: (! (dut_master_write_in_addr_rRdPtr.read ==
+	       dut_master_write_in_addr_rWrPtr.read)) &&
+	   dut_master_write_in_addr_wDataOut.whas
+Blocking rules: (none)
+ 
+Rule: dut_master_write_deqInData
+Predicate: (! (dut_master_write_in_data_rRdPtr.read ==
+	       dut_master_write_in_data_rWrPtr.read)) &&
+	   (! dut_master_write_isRst_isInReset) &&
+	   dut_master_write_wwready.wget
+Blocking rules: (none)
+ 
+Rule: dut_master_write_forwardInData
+Predicate: (! (dut_master_write_in_data_rRdPtr.read ==
+	       dut_master_write_in_data_rWrPtr.read)) &&
+	   dut_master_write_in_data_wDataOut.whas
+Blocking rules: (none)
+ 
+Rule: dut_master_write_enqOut
+Predicate: (! ((dut_master_write_out_rRdPtr.read + 6'd16) ==
+	       dut_master_write_out_rWrPtr.read)) &&
+	   (! dut_master_write_isRst_isInReset) &&
+	   dut_master_write_wpbvalid.wget
+Blocking rules: (none)
+ 
+Rule: testFSM_start_reg__dreg_update
+Predicate: True
+Blocking rules: (none)
+ 
+Rule: testFSM_fired__dreg_update
+Predicate: True
+Blocking rules: (none)
+ 
+Rule: testFSM_restart
+Predicate: testFSM_start_reg_1 && (! testFSM_fired) &&
+	   ((! testFSM_abort.whas) || (! testFSM_abort.wget))
+Blocking rules: (none)
+ 
+Rule: testFSM_action_l13c17
+Predicate: testFSM_start_wire.whas && testFSM_start_wire.wget
+Blocking rules: (none)
+ 
+Rule: testFSM_fsm_start
+Predicate: ((! testFSM_start_reg_1) || testFSM_fired) && testFSM_start_reg
+Blocking rules: (none)
+ 
+Logical execution order: done,
+			 go,
+			 dut_slave_read_addrInWrite,
+			 dut_slave_read_putOutData,
+			 dut_slave_read_deqOut,
+			 dut_slave_read_isRst_isResetAssertedUpdate,
+			 dut_slave_write_addrInWrite,
+			 dut_slave_write_dataInWrite,
+			 dut_slave_write_mergeAddrData,
+			 dut_slave_write_outForward,
+			 dut_slave_write_outWrite,
+			 dut_slave_write_isRst_isResetAssertedUpdate,
+			 dut_master_read_deqIn,
+			 dut_master_read_enqOut,
+			 dut_master_read_isRst_isResetAssertedUpdate,
+			 dut_master_read_in_portB,
+			 dut_master_read_in_portB_read_data,
+			 dut_master_read_forwardIn,
+			 dut_master_read_in_portA,
+			 dut_master_read_out_1_portB,
+			 dut_master_read_out_1_portB_read_data,
+			 dut_master_read_out_1_portA,
+			 dut_master_write_deqInAddr,
+			 dut_master_write_deqInData,
+			 dut_master_write_enqOut,
+			 dut_master_write_isRst_isResetAssertedUpdate,
+			 dut_master_write_in_addr_portB,
+			 dut_master_write_in_addr_portB_read_data,
+			 dut_master_write_forwardInAddr,
+			 dut_master_write_in_addr_portA,
+			 dut_master_write_in_data_portB,
+			 dut_master_write_in_data_portB_read_data,
+			 dut_master_write_forwardInData,
+			 dut_master_write_in_data_portA,
+			 dut_master_write_out_portB,
+			 dut_master_write_out_portB_read_data,
+			 dut_master_write_out_portA,
+			 testFSM_restart,
+			 testFSM_fsm_start,
+			 testFSM_action_l13c17,
+			 testFSM_start_reg__dreg_update,
+			 testFSM_fired__dreg_update
+
+===============================================
