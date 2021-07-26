@@ -1,0 +1,55 @@
+{
+   "ExpandedHierarchyInLayout":"",
+   "guistr":"# # String gsaved with Nlview 7.0.19  2019-03-26 bk=1.5019 VDI=41 GEI=35 GUI=JA:9.0 TLS
+#  -string -flagsOSRD
+preplace port ddr3_sdram_socket_j1_j3 -pg 1 -lvl 6 -x 1950 -y 60 -defaultsOSRD
+preplace port sys_diff_clock -pg 1 -lvl 0 -x 0 -y 120 -defaultsOSRD
+preplace port ddr3_sdram_socket_j1_j3_0 -pg 1 -lvl 6 -x 1950 -y 80 -defaultsOSRD
+preplace port sys_diff_clock_0 -pg 1 -lvl 0 -x 0 -y 160 -defaultsOSRD
+preplace port pci_express_x8 -pg 1 -lvl 6 -x 1950 -y 380 -defaultsOSRD
+preplace port pcie_refclk -pg 1 -lvl 0 -x 0 -y 380 -defaultsOSRD
+preplace port pcie_perstn -pg 1 -lvl 0 -x 0 -y 440 -defaultsOSRD
+preplace port reset -pg 1 -lvl 0 -x 0 -y 180 -defaultsOSRD
+preplace inst mig_7series_0 -pg 1 -lvl 2 -x 530 -y 160 -defaultsOSRD
+preplace inst xdma_0 -pg 1 -lvl 2 -x 530 -y 570 -defaultsOSRD
+preplace inst util_ds_buf -pg 1 -lvl 2 -x 530 -y 380 -defaultsOSRD
+preplace inst axi_smc -pg 1 -lvl 4 -x 1490 -y 400 -defaultsOSRD
+preplace inst rst_mig_7series_0_200M -pg 1 -lvl 3 -x 1010 -y 200 -defaultsOSRD
+preplace inst rst_mig_7series_0_189M -pg 1 -lvl 3 -x 1010 -y -40 -defaultsOSRD
+preplace inst xdma_0_axi_periph -pg 1 -lvl 4 -x 1490 -y 170 -defaultsOSRD
+preplace inst system_ila_0 -pg 1 -lvl 5 -x 1830 -y 200 -defaultsOSRD
+preplace inst ASICBuffer_0 -pg 1 -lvl 1 -x 170 -y 70 -defaultsOSRD
+preplace netloc pcie_perstn_1 1 0 2 N 440 310
+preplace netloc util_ds_buf_IBUF_OUT 1 1 2 350 -10 700J
+preplace netloc xdma_0_axi_aclk 1 2 2 780J 510 1190J
+preplace netloc mig_7series_0_c0_ui_clk 1 0 5 30 -20 N -20 780 90 1200J 510 1690
+preplace netloc mig_7series_0_c0_mmcm_locked 1 2 1 740 160n
+preplace netloc mig_7series_0_c0_ui_clk_sync_rst 1 2 1 750 100n
+preplace netloc rst_mig_7series_0_200M_peripheral_aresetn 1 0 5 30 190 330 710 790J 520 1240 520 1700
+preplace netloc mig_7series_0_c1_ui_clk 1 2 2 770 430 NJ
+preplace netloc mig_7series_0_c1_mmcm_locked 1 2 1 730 0n
+preplace netloc mig_7series_0_c1_ui_clk_sync_rst 1 2 1 720 -60n
+preplace netloc rst_mig_7series_0_189M_peripheral_aresetn 1 1 3 340 -150 NJ -150 1200
+preplace netloc reset_1 1 0 2 N 180 N
+preplace netloc xdma_0_axi_aresetn 1 2 2 770J 480 1210
+preplace netloc sys_diff_clock_0_1 1 0 2 NJ 160 N
+preplace netloc mig_7series_0_C0_DDR3 1 2 4 NJ 60 1200 40 1710 60 N
+preplace netloc axi_smc_M01_AXI 1 1 4 330 -160 NJ -160 NJ -160 1660
+preplace netloc sys_diff_clock_1 1 0 2 20J 150 310
+preplace netloc xdma_0_M_AXI 1 2 2 NJ 490 1230J
+preplace netloc xdma_0_pcie_mgt 1 2 4 NJ 530 N 530 1710 380 N
+preplace netloc ASICBuffer_0_M00_AXI 1 1 4 310J 0 710J 70 1220 290 1680
+preplace netloc pcie_refclk_1 1 0 2 NJ 380 N
+preplace netloc xdma_0_axi_periph_M00_AXI 1 0 5 20 -140 NJ -140 NJ -140 NJ -140 1700
+preplace netloc axi_smc_M00_AXI 1 1 4 320 -170 NJ -170 NJ -170 1670
+preplace netloc mig_7series_0_C1_DDR3 1 2 4 NJ 80 1210 50 1680 80 N
+preplace netloc xdma_0_M_AXI_LITE 1 2 2 760J 100 1210
+levelinfo -pg 1 0 170 530 1010 1490 1830 1950
+pagesize -pg 1 -db -bbox -sgen -170 -550 2200 720
+"
+}
+{
+   "da_axi4_cnt":"6",
+   "da_board_cnt":"2",
+   "da_xdma_cnt":"1"
+}

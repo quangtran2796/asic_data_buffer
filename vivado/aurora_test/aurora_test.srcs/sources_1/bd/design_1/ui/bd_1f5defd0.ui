@@ -1,0 +1,47 @@
+{
+   "ExpandedHierarchyInLayout":"",
+   "commentid":"",
+   "guistr":"# # String gsaved with Nlview 7.0.19  2019-03-26 bk=1.5019 VDI=41 GEI=35 GUI=JA:9.0 TLS
+#  -string -flagsOSRD
+preplace port pci_express_x8 -pg 1 -lvl 9 -x 2780 -y -460 -defaultsOSRD
+preplace port pcie_refclk -pg 1 -lvl 0 -x -100 -y -510 -defaultsOSRD
+preplace port reset -pg 1 -lvl 0 -x -100 -y -340 -defaultsOSRD
+preplace port pcie_perstn -pg 1 -lvl 0 -x -100 -y -300 -defaultsOSRD
+preplace inst aurora_8b10b_0 -pg 1 -lvl 4 -x 1260 -y 120 -defaultsOSRD
+preplace inst aurora_8b10b_1 -pg 1 -lvl 3 -x 860 -y 130 -defaultsOSRD
+preplace inst ASICBuffer_0 -pg 1 -lvl 2 -x 530 -y 10 -defaultsOSRD
+preplace inst xdma_0 -pg 1 -lvl 5 -x 1660 -y -410 -defaultsOSRD
+preplace inst axi_fifo_mm_s -pg 1 -lvl 7 -x 2340 -y 70 -defaultsOSRD
+preplace inst axis_dwidth_converter -pg 1 -lvl 8 -x 2630 -y 50 -defaultsOSRD
+preplace inst ASICBuffer_0_axi_periph -pg 1 -lvl 6 -x 2010 -y 50 -defaultsOSRD
+preplace inst rst_aurora_8b10b_0_156M -pg 1 -lvl 5 -x 1660 -y 60 -defaultsOSRD
+preplace inst util_ds_buf -pg 1 -lvl 4 -x 1260 -y -510 -defaultsOSRD
+preplace inst xdma_0_axi_periph -pg 1 -lvl 6 -x 2010 -y -420 -defaultsOSRD
+preplace netloc reset_1 1 0 5 -80 -290 N -290 N -290 N -290 1460
+preplace netloc pcie_perstn_1 1 0 5 NJ -300 110 -390 NJ -390 NJ -390 NJ
+preplace netloc aurora_8b10b_0_tx_out_clk 1 1 7 110 90 650 320 NJ 320 1470 160 1850 170 2160 170 2510J
+preplace netloc rst_aurora_8b10b_0_156M_peripheral_aresetn 1 1 7 120 330 NJ 330 NJ 330 1480J 290 1860 180 2170 180 2520J
+preplace netloc util_ds_buf_IBUF_OUT 1 4 1 1460J -520n
+preplace netloc xdma_0_axi_aclk 1 5 1 1850 -460n
+preplace netloc xdma_0_axi_aresetn 1 5 1 1860 -440n
+preplace netloc aurora_8b10b_1_tx_out_clk 1 2 2 670 310 1040
+preplace netloc aurora_8b10b_0_USER_DATA_M_AXI_RX 1 4 1 1450 -450n
+preplace netloc xdma_0_M_AXI_LITE 1 5 1 1850 -490n
+preplace netloc ASICBuffer_0_axi_periph_M00_AXI 1 6 1 N 50
+preplace netloc ASICBuffer_0_M00_AXI 1 2 4 660J -50 NJ -50 NJ -50 1840
+preplace netloc axi_fifo_mm_s_AXI_STR_TXD 1 7 1 N 30
+preplace netloc axis_dwidth_converter_M_AXIS 1 2 7 660 300 NJ 300 NJ 300 NJ 300 NJ 300 NJ 300 2740
+preplace netloc xdma_0_axi_periph_M00_AXI 1 1 6 120 -580 NJ -580 NJ -580 NJ -580 NJ -580 2160
+preplace netloc xdma_0_pcie_mgt 1 5 4 1840J -540 2170 -460 N -460 N
+preplace netloc pcie_refclk_1 1 0 4 NJ -510 N -510 NJ -510 NJ
+levelinfo -pg 1 -100 90 530 860 1260 1660 2010 2340 2630 2780
+pagesize -pg 1 -db -bbox -sgen -240 -800 2940 820
+"
+}
+{
+   "da_axi4_cnt":"2",
+   "da_axi4_s2mm_cnt":"1",
+   "da_board_cnt":"20",
+   "da_clkrst_cnt":"20",
+   "da_xdma_cnt":"1"
+}
