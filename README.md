@@ -2,7 +2,7 @@
 A system used to buffer the high rate data stream of an ASIC and synchronize the transfer process between FPGA and the host PC. The gold of the system is to store all the data of the ASIC on the host PC without any loss.
 
 ## Description
-The system contains a data generator IP core that generates the data stream and writes it in a configurable way to the DRAM. This generator is simulating the real data stream from the ASIC and could be replaced by the ASIC data later. In Addition, a host PC runs the PCI drivers of Xilinx to read the data back from the DRAM. Finally, a memory generator interface (MIG) is used to manage the memory access from the IP core and the host PC.
+The system contains a data generator IP core that generates the data stream and writes it in a configurable way to the DRAM. This generator is simulating the real data stream from the ASIC and could be replaced by the ASIC data later. In addition, a host PC runs the PCI drivers of Xilinx to read the data back from the DRAM. Finally, a memory generator interface (MIG) is used to manage the memory access from the IP core and the host PC.
 
 ## Project Architecture
 The project is composed of following parts:
@@ -27,7 +27,7 @@ To run the project there are several requirements:
 
    - To install the Bluespec compiler follow the instruction at the following github repository: [B-Lang-org/bsc](https://github.com/B-Lang-org/bsc).
 
-   - To run the project, go to thr directory [asic_data_buffer/bluespec/asic-buffer/](asic_data_buffer/bluespec/asic-buffer/) and run:
+   - To run the project, go to the directory asic_data_buffer/bluespec/asic-buffer/ and run:
    ```sh
    make
    ``` 
@@ -37,7 +37,7 @@ To run the project there are several requirements:
    ```sh
    make SIM_TYPE=VERILOG
    ``` 
-   Afterward, the IP core can be found at the directory: [asic_data_buffer/bluespec/asic-buffer/build/ip/ASICBuffer/](asic_data_buffer/bluespec/asic-buffer/build/ip/ASICBuffer/)  
+   Afterward, the IP core can be found at the directory: asic_data_buffer/bluespec/asic-buffer/build/ip/ASICBuffer/  
 
    - The design uses the library [BSCVTools](https://github.com/esa-tu-darmstadt/BSVTools) and [BlueLib](https://github.com/esa-tu-darmstadt/BlueLib) of [Embedded Systems and Applications Group](https://www.esa.informatik.tu-darmstadt.de) TU Darmstadt.
 
